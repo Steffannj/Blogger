@@ -41,7 +41,7 @@
         </ul>
         
         <div class="modal-footer">
-          <button id="close-btn" type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button id="close-btn" type="button" class="btn btn-secondary" click.delegate="close()" data-dismiss="modal">Close</button>
           <button type="button" class="btn btn-primary" click.delegate="addAccount()"
             disabled.bind="vc.errors.length > 0 || !username || !password">Add account</button>
         </div>

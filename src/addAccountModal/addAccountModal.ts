@@ -6,8 +6,8 @@ import { inject } from 'aurelia-framework';
 import * as $ from 'jquery';
 
 @inject(ValidationControllerFactory, AccountRepository, CheckRegister)
-export class AddAccountModal{
-  username:string;
+export class AddAccountModal {
+  username: string;
   password: string;
   accountTypes = [AccountType.User, AccountType.Admin];
   accountType: AccountType = AccountType.User;
@@ -17,22 +17,27 @@ export class AddAccountModal{
   cr: CheckRegister;
   error = "";
 
-  constructor(vcf: ValidationControllerFactory, ar: AccountRepository, cr: CheckRegister){
+  constructor(vcf: ValidationControllerFactory, ar: AccountRepository, cr: CheckRegister) {
     this.vc = vcf.createForCurrentScope();
     this.ar = ar;
     this.cr = cr;
   }
 
-  addAccount(){
+  addAccount() {
     try {
       if (this.cr.isUsernameAvailable(this.username))
         this.ar.addAccount(this.username, this.password, AccountType.User);
-        $('#close-btn').click(); 
+      $('#close-btn').click();
     } catch (err) {
       this.error = err;
     }
   }
-
+  
+  close() {
+    this.username = "";
+    this.password = "";
+    this.error = "";
+  }
 }
 ValidationRules
   .ensure("username")

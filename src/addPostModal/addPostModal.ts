@@ -32,6 +32,7 @@ export class AddPostModal {
     this.title = "";
     this.body = "";
   }
+
 }
 ValidationRules
   .ensure("title")

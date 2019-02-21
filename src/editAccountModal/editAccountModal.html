@@ -40,7 +40,7 @@
         </ul>
         
         <div class="modal-footer">
-          <button id="close-edit" type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button id="close-edit" type="button" class="btn btn-secondary" click.delegate="close()" data-dismiss="modal">Close</button>
           <button type="button" class="btn btn-primary" click.delegate="editAccount()"
             disabled.bind="vc.errors.length > 0">Edit account</button>
         </div>

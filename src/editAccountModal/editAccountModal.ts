@@ -27,6 +27,7 @@ export class EditAccountModal {
     this.cr = cr;
     this.ea = ea;
   }
+
   attached() {
     this.ea.subscribe("editAccount", acc => {
       this.username = acc.username;
@@ -38,7 +39,6 @@ export class EditAccountModal {
   }
 
   editAccount() {
-    this.error = "";
     try {
       if (this.editableAccount.username == this.username) {
         this.ar.editAccount(this.accountId, this.username, this.password, this.accountType);
@@ -52,6 +52,9 @@ export class EditAccountModal {
     }
   }
 
+  close(){
+    this.error = "";
+  }
 }
 ValidationRules
   .ensure("username")

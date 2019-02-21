@@ -85,9 +85,9 @@ div.au-stagger {
   border-radius: 8px;
   text-align: center;
   padding: 0;
-  background-color: #337ab7;
-  color: rgb(136, 172, 217);
-  margin-bottom: 32px;
+  background-color: #9bc9f1;
+  color: rgb(9, 15, 22);
+  margin-top: 32px;
   box-shadow: 0 0 5px rgba(0, 0, 0, .5);
 }
 
@@ -172,8 +172,4 @@ div.au-stagger {
   100% {
     opacity: 1;
   }
-}
-.scrollable {
-  height:450px;
-  overflow-y: scroll;
 }

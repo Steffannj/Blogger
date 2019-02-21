@@ -26,13 +26,15 @@ export class AddAccountModal {
   addAccount() {
     try {
       if (this.cr.isUsernameAvailable(this.username))
-        this.ar.addAccount(this.username, this.password, AccountType.User);
+        this.ar.addAccount(this.username, this.password, this.accountType);
       $('#close-btn').click();
+      this.username = "";
+      this.password = "";
     } catch (err) {
       this.error = err;
     }
   }
-  
+
   close() {
     this.username = "";
     this.password = "";

@@ -35,11 +35,11 @@
         </div>
       </div>
       <div if.bind="isInSearchMode">
-        <div show.bind="searchResults">
+        <div class="col-sm-8 col-sm-pull-4" show.bind="searchResults">
           <h4>Results for "${searchResults}":</h4>
-        </div>
-        <div class="col-sm-8 col-sm-pull-4" show.bind="queriedPosts.length == 0">
-          <h4>No posts to show.</h4>
+          <div show.bind="queriedPosts.length == 0">
+            <h4>No posts to show.</h4>
+          </div>
         </div>
         <div class="col-sm-8 col-sm-pull-4">
           <div repeat.for="post of queriedPosts">

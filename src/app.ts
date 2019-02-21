@@ -23,7 +23,7 @@ export class App {
       { route: ['', 'login'], name: 'login', moduleId: PLATFORM.moduleName('loginAndRegister/login'), title: 'Log In' },
       { route: 'signup', name: 'signup', moduleId: PLATFORM.moduleName('loginAndRegister/signup'), title: 'Sign Up' },
       { route: 'userprofile', name: 'userprofile', moduleId: PLATFORM.moduleName('userProfile/userprofile'), title: 'Your Profile' },
-      { route: 'adminpage', name: 'adminpage', moduleId: PLATFORM.moduleName('admin/adminPage'), title: 'Your Profile' },
+      { route: 'adminpage', name: 'adminpage', moduleId: PLATFORM.moduleName('admin/adminPage'), title: 'Admin Profile' },
       { route: 'adminhome', name: 'adminhome', moduleId: PLATFORM.moduleName('admin/adminHome'), title: 'Admin Home' },
       { route: 'home', name: 'home', moduleId: PLATFORM.moduleName('home/home'), title: 'Home' }
     ]);

@@ -91,7 +91,7 @@
         <h3>Posts by ${selectedAccount.username}</h3>
       </div>
       <div repeat.for="post of selectedAccount.blogPosts">
-        <div class="col-sm-4 scrollable">
+        <div class="col-sm-4">
           <compose view="../postView/postView.html"></compose>
           <compose view-model="../editPostModal/editPostModal"></compose>
           <button class="btn btn-danger" click.delegate="deletePost(post)">Delete Post</button>

@@ -29,9 +29,6 @@ export class AdminPage {
   }
 
   attached() {
-    if (!this.currentUser) {
-      this.router.navigateToRoute("login");
-    }
     this.listOfAccounts = this.accountRepository.getAllAccounts();
     this.listOfPosts = this.postRepository.getPosts(this.currentUser.accountType);
   }

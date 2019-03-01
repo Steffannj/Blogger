@@ -27,9 +27,6 @@ export class UserProfile {
 
   attached() {
     this.currentUser = this.pu.getCurrentUser();
-    if (!this.currentUser) {
-      this.router.navigateToRoute("login");
-    }
   }
 
   deletePost(post: Post) {

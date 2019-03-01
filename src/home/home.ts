@@ -32,9 +32,6 @@ export class Home {
 
   attached() {
     this.currentUser = this.pu.getCurrentUser();
-    if (!this.currentUser) {
-      this.router.navigateToRoute("login");
-    }
     this.posts = this.pr.getPosts(this.currentUser.accountType);
   }
 
